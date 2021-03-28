@@ -46,8 +46,12 @@ button:focus {
   outline: 0;
 }
 
-.controls svg:hover {
+button:hover {
   color: bisque;
+}
+
+button > * {
+  pointer-events: none;
 }
 
 .plus-minus {
