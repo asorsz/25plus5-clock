@@ -23,7 +23,7 @@ const Controls = (props) => {
       </div>
       <div className="control-section">
         <div className="controls">
-          <button id="start_stop" className="play-pause-reset">
+          <button id="start_stop" className="play-pause-reset" onClick={() => props.startStop()}>
             {props.playing ? <AiFillPauseCircle /> : <AiFillPlayCircle />}            
           </button>
           <button id="reset" className="play-pause-reset" onClick={() => props.reset()}><BiReset /></button>
@@ -45,11 +45,6 @@ const Controls = (props) => {
           ><AiFillPlusCircle /></button>
         </div>
       </div>
-      {/* <button data-time="20" classNameName="timer__button">20 Secs</button>
-      <button data-time="300" classNameName="timer__button">Work 5</button>
-      <button data-time="900" classNameName="timer__button">Quick 15</button>
-      <button data-time="1200" classNameName="timer__button">Snack 20</button>
-      <button data-time="3600" classNameName="timer__button">Lunch Break</button> */}
     </div>
   )
 };
