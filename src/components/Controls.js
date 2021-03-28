@@ -26,7 +26,7 @@ const Controls = (props) => {
           <button id="start_stop" className="play-pause-reset">
             {props.playing ? <AiFillPauseCircle /> : <AiFillPlayCircle />}            
           </button>
-          <button id="reset" className="play-pause-reset"><BiReset /></button>
+          <button id="reset" className="play-pause-reset" onClick={() => props.reset()}><BiReset /></button>
         </div>
       </div>
       <div className="control-section">

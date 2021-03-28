@@ -20,6 +20,17 @@ const Timer = () => {
     display: getDisplay(sessionLength * 60),
     playing: false,
   });
+
+  const reset = () => {
+    setBreakLength(5);
+    setSessionLength(25);
+    setTimer({
+      type: 'Session',
+      seconds: sessionLength * 60,
+      display: getDisplay(sessionLength * 60),
+      playing: false,
+    })
+  };
     
   const handlePlusMinusClick = (e) => {
     if (timer.playing) return;
@@ -43,7 +54,7 @@ const Timer = () => {
 
   return (
     <div className="timer">
-      <Controls playing={timer.playing} breakLength={breakLength} sessionLength={sessionLength} handlePlusMinusClick={handlePlusMinusClick}/>
+      <Controls playing={timer.playing} breakLength={breakLength} sessionLength={sessionLength} handlePlusMinusClick={handlePlusMinusClick} reset={reset}/>
       <Display label={timer.type} timeLeft={timer.display}/>
   </div>
   );
