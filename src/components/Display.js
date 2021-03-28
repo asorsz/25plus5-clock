@@ -1,10 +1,10 @@
 import '../css/Display.css';
 
-const Display = () => {
+const Display = (props) => {
   return (
     <div className="display">
-      <div id="timer-label">Session</div>
-      <h1 id="time-left">25:00</h1>
+      <div id="timer-label">{props.label}</div>
+      <h1 id="time-left">{props.timeLeft}</h1>
     </div>
   )
 };
