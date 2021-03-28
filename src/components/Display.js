@@ -3,8 +3,8 @@ import '../css/Display.css';
 const Display = () => {
   return (
     <div className="display">
-      <h1 className="display__time-left">0</h1>
-      <p className="display__end-time"></p>
+      <div id="timer-label">Session</div>
+      <h1 id="time-left">25:00</h1>
     </div>
   )
 };
